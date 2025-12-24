@@ -4,7 +4,7 @@ import sys
 import os
 
 def add_branche(splittedline : list[str]):
-    branche = Branche(int(splittedline[0], splittedline[1], int(splittedline[2]))) #id, location and num of employees
+    branche = Branche(int(splittedline[0]), splittedline[1], int(splittedline[2]))) #id, location and num of employees
     repo._branches.insert(branche)
 
 def add_supplier(splittedline : list[str]):
