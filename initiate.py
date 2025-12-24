@@ -4,7 +4,7 @@ import sys
 import os
 
 def add_branche(splittedline : list[str]):
-    branche = Branche(int(splittedline[0]), splittedline[1], int(splittedline[2]))) #id, location and num of employees
+    branche = Branche(int(splittedline[0]), splittedline[1], int(splittedline[2])) #id, location and num of employees
     repo._branches.insert(branche)
 
 def add_supplier(splittedline : list[str]):
@@ -28,7 +28,6 @@ def main(args : list[str]):
     inputfilename = args[1]
     # delete the database file if it exists
     repo._close()
-    # uncomment if needed
     if os.path.isfile("bgumart.db"):
         os.remove("bgumart.db")
     repo.__init__()
@@ -36,7 +35,7 @@ def main(args : list[str]):
     with open(inputfilename) as inputfile:
         for line in inputfile:
             splittedline : list[str] = line.strip().split(",")
-            adders.get(splittedline[0])(splittedline[1:])
+            adders.get(splittedline[0])(splittedline[1:]) #gives the relevant function the arguments
 
 if __name__ == '__main__':
     main(sys.argv)

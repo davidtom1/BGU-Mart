@@ -8,7 +8,7 @@ class Employee(object):
         self.id = id
         self.name = name
         self.salary = salary
-        self.branch = branche
+        self.branche = branche
 
     def __str__(self) :
         return f"({self.id}, '{self.name}', {self.salary}, {self.branch})"
